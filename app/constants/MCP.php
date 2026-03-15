@@ -44,7 +44,7 @@ public const GEMINI_TOOLS = [
 
   [
    "name" => "addMovies",
-   "description" => "Add a movie to the list",
+   "description" => "Add a movie to the list", 
    "parameters" => [
      "type" => "object",
      "properties" => [
