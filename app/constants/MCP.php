@@ -35,8 +35,9 @@ public const claudeTools =[
         ]
 ]
 ];
+//-------------------------------------//
 
-// context format for gemini
+// context format for gemini mcp
 
 public const GEMINI_TOOLS = [
 
