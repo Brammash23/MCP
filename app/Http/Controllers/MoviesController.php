@@ -54,7 +54,7 @@ class MoviesController extends Controller
             'movie_name' => $request->movie_name,
             'released_year' => $request->released_year ?? Carbon::now(),
             'category' => $request->category,
-            'ratings' => $request->ratings
+            'ratings' => $request->ratings 
         ];
         $movieId= DB::table('movies')->insertGetId($data);
           return response()->json([
@@ -94,10 +94,12 @@ class MoviesController extends Controller
         $data=[
             'is_deleted' => 1
         ];
+        
         DB::table('movies')
         ->when(!empty($id),function ($q) use($id) {
             $q->where('id',$id);
         })->update($data);
+
           return response()->json([
             'status'=>200,
             'message' => 'Updated'
